@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rubber Pirate | Cybersecurity Specialist</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loading-screen">
+        <div class="loading-container">
+            <div class="terminal-loader"></div>
+            <div class="loading-text">Initializing system</div>
+        </div>
+    </div>
+    
+    <!-- Custom cursor elements -->
+    <div class="custom-cursor"></div>
+    
+    <!-- Polybar-style Top Bar -->
+    <div id="top-bar" class="top-bar">
+        <div class="top-bar-inner">
+            <div class="top-bar-left">
+                <div class="app-menu">
+                    <span class="logo"><i class="fas fa-terminal"></i></span>
+                    <span class="workspace-name hide-on-mobile">rubberpirate@arch</span>
+                </div>
+                <div class="workspaces">
+                    <a href="#home" class="workspace active"><i class="fas fa-home"></i> <span class="workspace-text">home</span></a>
+                    <a href="#about" class="workspace"><i class="fas fa-user"></i> <span class="workspace-text">about</span></a>
+                    <a href="#skills" class="workspace"><i class="fas fa-brain"></i> <span class="workspace-text">skills</span></a>
+                    <a href="#projects" class="workspace"><i class="fas fa-code"></i> <span class="workspace-text">projects</span></a>
+                    <a href="#certifications" class="workspace"><i class="fas fa-certificate"></i> <span class="workspace-text">certifications</span></a>
+                    <a href="#experience" class="workspace"><i class="fas fa-briefcase"></i> <span class="workspace-text">experience</span></a>
+                    <a href="#education" class="workspace"><i class="fas fa-graduation-cap"></i> <span class="workspace-text">education</span></a>
+                </div>
+            </div>
+            <div class="top-bar-right">
+                <div class="system-tray">
+                    <span class="tray-item wifi-icon" title="Toggle WiFi"><i class="fas fa-wifi"></i></span>
+                    <span class="tray-item sound-icon" title="Toggle Sound"><i class="fas fa-volume-up"></i></span>
+                    <span class="tray-item" id="clock">00:00:00</span>
+                    <span class="tray-item terminal-button" id="terminal-launcher"><i class="fas fa-terminal"></i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="desktop">
+
+        <!-- Main Content -->
+        <div class="content-container">
+            <!-- Hero Section -->
+            <section id="home" class="section">
+                <div class="profile-header">
+                    <div class="profile-img">
+                        <div class="avatar-placeholder luffy-avatar">
+                            <div class="logo-background"></div>
+                            <img src="images/pplogo.png" alt="Rubber Pirate Logo" class="logo-img-bg">
+                        </div>
+                    </div>
+                    <div class="profile-info">
+                        <h1>Rubber Pirate</h1>
+                        <p class="title">Cybersecurity Specialist | Ethical Hacker</p>
+                        <div class="terminal-typing">
+                            <span class="terminal-prompt">$ </span><span class="typewriter-text">whoami</span>
+                            <div class="terminal-output">
+                                <div>> Penetration testing & security research specialist</div>
+                                <div>> Bug bounty hunter</div>
+                                <div>> CTF competitor</div>
+                            </div>
+                            <span class="terminal-prompt">$ </span><span class="typewriter-text">cat skills.txt</span>
+                            <div class="terminal-output">
+                                <div><span class="skill-tag">Network Security</span> <span class="skill-tag">Reverse Engineering</span> <span class="skill-tag">Binary Exploitation</span></div>
+                            </div>
+                        </div>
+                        <div class="contact-info">
+                            <div><i class="fas fa-envelope"></i> rahulridhu21@gmail.com</div>
+                            <div><i class="fas fa-map-marker-alt"></i> [REDACTED]</div>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://github.com/rubberpirate" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="https://discord.gg/jpmVydTh" target="_blank" title="Discord"><i class="fab fa-discord"></i></a>
+                            <a href="https://www.linkedin.com/in/rahul-rajith/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://tryhackme.com/p/rubberpirate" target="_blank" title="TryHackMe"><i class="fas fa-flag"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="section">
+                <h2 class="section-title">$ cat ~/about.md</h2>
+                <div class="section-content">
+                    <div class="about-text">
+                        <p>A cybersecurity enthusiast and B.Tech CSE student at SRM University AP with hands-on experience in penetration testing, digital forensics, and CTF competitions. Currently working as an Associate at Satoshi Lab focusing on cybersecurity initiatives. Proficient in Pentesting, IoT, and Linux systems.</p>
+                    </div>
+                    <div class="hobbies-container">
+                        <h3>When I'm not hacking:</h3>
+                        <div class="hobbies">
+                            <div class="hobby-item"><i class="fas fa-gamepad"></i> Gaming</div>
+                            <div class="hobby-item"><a href="https://anilist.co/user/RubberPirate/" target="_blank" style="color: inherit; text-decoration: none;"><i class="fas fa-tv"></i> Watching Anime & Movies</a></div>
+                            <div class="hobby-item"><a href="https://anilist.co/user/RubberPirate/" target="_blank" style="color: inherit; text-decoration: none;"><i class="fas fa-book"></i> Reading Manga and Manhwa's</a></div>
+                            <div class="hobby-item"><i class="fas fa-dumbbell"></i> Gym and Powerlifting</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Anime Divider 1 -->
+            <div class="anime-divider">
+                <div class="anime-logo one-piece"></div>
+            </div>
+
+            <!-- Skills Section -->
+            <section id="skills" class="section">
+                <h2 class="section-title">$ ls -la ~/skills/ <span class="brain-emoji">🧠</span></h2>
+                <div class="section-content">
+                    <div class="skills-grid">
+                        <div class="skill-category-container">
+                            <div class="skill-category-header">
+                                <i class="fas fa-shield-alt"></i> Security
+                            </div>
+                            <div class="skill-pills">
+                                <div class="skill-pill">Cybersecurity</div>
+                                <div class="skill-pill">Penetration Testing</div>
+                                <div class="skill-pill">Ethical Hacking</div>
+                                <div class="skill-pill">Digital Forensics</div>
+                                <div class="skill-pill">CTF</div>
+                                <div class="skill-pill">Exploit Development</div>
+                                <div class="skill-pill">Bug Bounty Hunting</div>
+                                <div class="skill-pill">Network Security</div>
+                            </div>
+                        </div>
+                        <div class="skill-category-container">
+                            <div class="skill-category-header">
+                                <i class="fas fa-server"></i> Systems & Networks
+                            </div>
+                            <div class="skill-pills">
+                                <div class="skill-pill">Linux</div>
+                                <div class="skill-pill">IoT</div>
+                                <div class="skill-pill">Embedded Hardware</div>
+                                <div class="skill-pill">Network Protocol Analysis</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Anime Divider 2 -->
+            <div class="anime-divider">
+                <div class="anime-logo bleach"></div>
+            </div>
+
+            <!-- Projects Section -->
+            <section id="projects" class="section">
+                <h2 class="section-title" data-emoji="⚡">$ ls -la ~/projects/</h2>
+                <div class="section-content">
+                    <!-- SpiritBox Project -->
+                    <div class="project-item">
+                        <div class="project-content">
+                            <h3 class="project-title">SpiritBox</h3>
+                            <p>An IoT security research device that can detect, analyze, and interact with wireless protocols including WiFi, Bluetooth, RFID, and more.</p>
+                            <div class="project-tech">
+                                <span>ESP32</span>
+                                <span>Python</span>
+                                <span>C++</span>
+                                <span>RF</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/rubberpirate/SpiritBox" target="_blank" class="project-link"><i class="fab fa-github"></i> View Repository</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- WebCyphr Project -->
+                    <div class="project-item">
+                        <div class="project-content">
+                            <h3 class="project-title">WebCyphr</h3>
+                            <p>A Chrome extension for real-time traffic encryption, phishing protection, and zero-day vulnerability detection in web applications.</p>
+                            <div class="project-tech">
+                                <span>JavaScript</span>
+                                <span>Chrome API</span>
+                                <span>WebSockets</span>
+                                <span>Encryption</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/rubberpirate/WebCyphr" target="_blank" class="project-link"><i class="fab fa-github"></i> View Repository</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Pirate Ducky Project -->
+                    <div class="project-item">
+                        <div class="project-content">
+                            <h3 class="project-title">Pirate Ducky</h3>
+                            <p>A low-cost alternative to USB Rubber Ducky for penetration testing. Features custom payload creation and Arduino compatibility.</p>
+                            <div class="project-tech">
+                                <span>Arduino</span>
+                                <span>C</span>
+                                <span>Python</span>
+                                <span>Hardware</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/rubberpirate/pirate-ducky" target="_blank" class="project-link"><i class="fab fa-github"></i> View Repository</a>
+                            </div>
+                        </div>
+                    </div>
+                        
+                    <!-- Pirated Tab Project -->
+                    <div class="project-item">
+                        <div class="project-content">
+                            <h3 class="project-title">Pirated Tab</h3>
+                            <p>A custom browser startpage with terminal-like interface and quick access to bookmarks and search engines. Features dark mode and customizable shortcuts.</p>
+                            <div class="project-tech">
+                                <span>JavaScript</span>
+                                <span>HTML/CSS</span>
+                                <span>LocalStorage</span>
+                                <span>Browser API</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/rubberpirate/Pirated-tab" target="_blank" class="project-link"><i class="fab fa-github"></i> View Repository</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Sandwich Files Project -->
+                    <div class="project-item">
+                        <div class="project-content">
+                            <h3 class="project-title">Sandwich Files</h3>
+                            <p>An advanced file transfer utility with built-in encryption, perfect for secure data transfer during penetration testing engagements.</p>
+                            <div class="project-tech">
+                                <span>Python</span>
+                                <span>Cryptography</span>
+                                <span>Networking</span>
+                                <span>Linux</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/rubberpirate/Sendwich-files-transfer" target="_blank" class="project-link"><i class="fab fa-github"></i> View Repository</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- UpResume Project -->
+                    <div class="project-item">
+                        <div class="project-content">
+                            <h3 class="project-title">UpResume</h3>
+                            <p>A modern resume builder with custom templates and AI-powered content suggestions for cybersecurity professionals.</p>
+                            <div class="project-tech">
+                                <span>JavaScript</span>
+                                <span>HTML/CSS</span>
+                                <span>React</span>
+                                <span>AI Integration</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/rubberpirate/UpResume" target="_blank" class="project-link"><i class="fab fa-github"></i> View Repository</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Anime Divider -->
+            <div class="anime-divider">
+                <div class="anime-logo demon-slayer"></div>
+            </div>
+            
+            <!-- Certifications Section -->
+            <section id="certifications" class="section">
+                <h2 class="section-title" data-emoji="🎓">$ ls -la ~/certifications/</h2>
+                <div class="section-content">
+                    <div class="certifications-container">
+                        <!-- Certification items -->
+                        <div class="certification-item">
+                            <img src="images/certifications/hackfinity.png" alt="Hackfinity Certificate" class="certification-image">
+                            <div class="certification-info">
+                                <h3 class="certification-title">hackfinity Certificate</h3>
+                                <p class="certification-issuer">TryHackMe</p>
+                                <p class="certification-date">Issued: Apr 2025</p>
+                                <p class="certification-id">Credential ID: THM-BORJQ95DDV</p>
+                                <a href="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-BORJQ95DDV.pdf" target="_blank" class="show-credential-btn"><i class="fas fa-external-link-alt"></i> Show credential</a>
+                            </div>
+                        </div>
+                        
+                        <div class="certification-item">
+                            <img src="images/certifications/placeholder.jpg" alt="Certificate" class="certification-image">
+                            <div class="certification-info">
+                                <h3 class="certification-title">Certified Ethical Hacker (CEH)</h3>
+                                <p class="certification-issuer">EC-Council</p>
+                                <p class="certification-date">Issued: Jan 2025</p>
+                                <p class="certification-id">Credential ID: ECC1234567</p>
+                                <a href="#" class="show-credential-btn" onclick="return false;"><i class="fas fa-external-link-alt"></i> Show credential</a>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-center mt-3 mb-0"><i class="fas fa-info-circle"></i> More certifications to be added soon.</p>
+                </div>
+            </section>
+            
+            <!-- Anime Divider -->
+            <div class="anime-divider">
+                <div class="anime-logo naruto"></div>
+            </div>
+            
+            <!-- Experience Section -->
+            <section id="experience" class="section">
+                <h2 class="section-title">$ cat ~/experience.log</h2>
+                <div class="section-content">
+                    <div class="timeline-container">
+                        <!-- Timeline connector -->
+                        <div class="timeline-line"></div>
+                        
+                        <!-- Experience 1 -->
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <div class="experience-header">
+                                    <h3>Associate</h3>
+                                    <span class="experience-company">Satoshi Lab, Next Tech Lab - Vijayawada, Andhra Pradesh</span>
+                                    <span class="experience-date">10/2024 - Present</span>
+                                </div>
+                                <ul class="experience-details">
+                                    <li>Pursuing advanced Cyber-Security initiatives</li>
+                                    <li>Developing multiple hardware penetration testing tools focused on ethical hacking</li>
+                                    <li>Contributing to team-based security research and development projects</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- Experience 2 (Sample) -->
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <div class="experience-header">
+                                    <h3>Security Research Intern</h3>
+                                    <span class="experience-company">Virtual Internship</span>
+                                    <span class="experience-date">05/2024 - 09/2024</span>
+                                </div>
+                                <ul class="experience-details">
+                                    <li>Participated in vulnerability research and discovery</li>
+                                    <li>Contributed to open-source security projects</li>
+                                    <li>Developed proof-of-concept exploits for educational purposes</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Education Section -->
+            <section id="education" class="section">
+                <h2 class="section-title">$ cat ~/education.md</h2>
+                <div class="section-content">
+                    <div class="education-item">
+                        <div class="education-header">
+                            <h3>B.Tech - CSE</h3>
+                            <span class="education-institution">SRM University AP - Guntur, Andhra Pradesh</span>
+                            <span class="education-date">Expected Graduation: 05/2028</span>
+                        </div>
+                        <div class="education-details">
+                            <div class="achievement">
+                                <span class="highlight">Won Secure-X Hackathon</span> Conducted by BSI Learning and SRMAP
+                            </div>
+                        </div>
+                    </div>
+                    <div class="education-item">
+                        <div class="education-header">
+                            <h3>12th - High School</h3>
+                            <span class="education-institution">Army Public School - Kanpur Cantt, Kanpur</span>
+                            <span class="education-date">Completed: 04/2024</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+
+        <!-- Terminal Window (Initially Hidden) -->
+        <div class="terminal-window" id="terminal-window">
+            <div class="window-header">
+                <div class="window-controls">
+                    <span class="close" id="terminal-close"></span>
+                </div>
+                <div class="window-title">rubberpirate@arch:~</div>
+                <div class="window-actions">
+                    <button id="terminal-transparency" title="Toggle Transparency"><i class="fas fa-adjust"></i></button>
+                </div>
+            </div>
+            <div class="terminal">
+                <div class="terminal-output" id="terminal-output">
+                    <div class="line">Welcome to Rubber Pirate's Terminal. Type <span class="cmd">help</span> to see available commands.</div>
+                </div>
+                <div class="terminal-input-line">
+                    <span class="prompt">rubberpirate@arch:~$</span>
+                    <input type="text" id="terminal-input" autocomplete="off">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stats Section -->
+    <div class="stats-section">
+        <div class="stats-container">
+            <div class="github-stats">
+                <img src="https://github-readme-stats.vercel.app/api?username=rubberpirate&theme=tokyonight&show_icons=true&hide_border=true&count_private=true" alt="GitHub Stats">
+            </div>
+            <div class="tryhackme-stats">
+                <div class="stats-title">
+                    <i class="fas fa-flag" style="color:#c11111;"></i>
+                    <span>TryHackMe Stats</span>
+                </div>
+                <div class="thm-content">
+                    <img src="https://tryhackme-badges.s3.amazonaws.com/rubberpirate.png" alt="TryHackMe Badge" class="thm-badge">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <a href="#home" id="back-to-top" title="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
