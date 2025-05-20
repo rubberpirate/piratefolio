@@ -1,4 +1,4 @@
-# Rahul Rajith's Portfolio
+# My Portfolio
 
 A cybersecurity-themed portfolio website featuring a Tokyo-night theme inspired by the Hyprland riced Arch OS aesthetic.
 
@@ -7,7 +7,7 @@ A cybersecurity-themed portfolio website featuring a Tokyo-night theme inspired 
 - Interactive terminal with custom commands
 - Responsive design that works on all devices
 - Section-based navigation with smooth transitions
-- Tokyo-night color scheme with cybersecurity elements
+- Tokyo-night color scheme
 - Minimalist yet functional UI
 
 ## Technologies Used
@@ -16,22 +16,11 @@ A cybersecurity-themed portfolio website featuring a Tokyo-night theme inspired 
 - CSS3 with custom properties for theming
 - Vanilla JavaScript
 - Font Awesome for icons
-- Google Fonts (JetBrains Mono for that terminal feel)
 
 ## Getting Started
 
 1. Clone this repository
 2. Open `index.html` in your browser
-
-Alternatively, you can use a local server:
-
-```bash
-# Using Python
-python -m http.server
-
-# Using Node.js
-npx serve
-```
 
 ## Terminal Commands
 
