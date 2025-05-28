@@ -1,0 +1,12 @@
+[build]
+  publish = "/"
+  command = ""  # No build command needed for a static site
+
+[build.environment]
+  NODE_VERSION = "16.0.0"
+
+# Redirect all URLs to index.html for SPA routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
